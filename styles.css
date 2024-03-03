@@ -27,16 +27,20 @@ html {
     scroll-behavior: smooth;
 }
 
+body > *{
+    padding: 0 15vw;
+}
+
 header {
     position: fixed;
     top: 0;
-    padding: 0 15vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100vw;
     height: 10vh;
     background-color: var(--color3);
+    z-index: 1000;
 }
 
 .icon {
@@ -80,6 +84,115 @@ header {
     cursor: pointer;
 }
 
+main {
+    margin: 4vh 0;
+}
+
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    gap: 5rem;
+}
+
+.my-name {
+    background-color: var(--color3);
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    color: var(--color6);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: 1px solid var(--color5);
+    text-align: center;
+}
+
+.intro {
+    text-align: center;
+    font-size: clamp(5rem, 4.5vw, 7rem );
+    max-width: 80rem;
+    line-height: 0.9;
+    font-weight: 900;
+
+}
+.emphasize-blue {
+    color: var(--color1);
+}
+
+.progress {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 10vw;
+}
+
+.progress li {
+    display: flex;
+    gap: 1rem;
+    width: 10rem;
+    align-items: center;
+}
+
+.progress li h2 {
+    background-color: var(--color3);
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+    color: var(--color6);
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: 1px solid var(--color5);
+    text-align: center;
+}
+
+.progress li p {
+    font-size: 1.1rem;
+}
+
+.divider {
+    border: 1px solid var(--color5);
+    height: 100%;
+    max-width: 1px;
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1vw;
+    height: fit-content;
+    padding: 10vh 0;
+}
+
+.h1-section-title {
+    font-size: clamp(3rem, 3vw, 5rem);
+    font-weight: 900;
+}
+
+.abtme-content {
+    display: flex;
+    gap: 2vw;
+    justify-content: left;
+    height: 30rem;
+    flex-wrap: wrap;
+}
+
+.abtme-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    width: 50%;
+    font-size: 1.7rem;
+    text-align: justify;
+    justify-content: center;
+}
+
+.abtme-image {
+    height: 100%;
+    margin: 0 auto;
+}
+
 @media (max-width: 768px) {
     .navbar {
         position: fixed;
@@ -105,45 +218,14 @@ header {
     }
 }
 
-main {
-    margin-top: 5.5rem;
+@media (max-width: 426px) {
+    main {
+        padding: 0 5vw;
+    }
 }
 
-.welcome-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    gap: 5rem;
-    padding: 0 2rem;
-}
-
-.my-name {
-    background-color: var(--color3);
-    padding: 1rem 2rem;
-    border-radius: 20px;
-    color: var(--color6);
-    font-size: 1.6rem;
-    font-weight: 600;
-}
-
-.intro {
-    text-align: center;
-    font-size: clamp(5rem, 4.5vw, 7rem );
-    max-width: 80rem;
-    line-height: 0.9;
-    font-weight: 900;
-}
-
-.primary-text {
-    color: var(--color1);
-}
-
-.progress {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 30rem;
+@media (max-width: 909px) {
+    .abtme-text {
+        width: 100%;
+    } 
 }
